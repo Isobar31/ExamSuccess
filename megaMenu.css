@@ -1,0 +1,97 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #ddd;
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+nav{
+  background: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.10);
+}
+
+nav ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  position: relative;
+  text-align: left;
+}
+
+nav li{
+  display: inline-block;
+}
+
+nav a{
+  color: #444;
+  text-decoration: none;
+  display: block;
+  padding: .75cm 1.75cm;
+}
+
+nav li:hover{ /*This makes main menu to be inclusively highlighted as long as its sub menu(s) is/are hovered*/
+  background: #444;
+}
+
+nav li:hover a{
+  color: #fff;
+}
+
+.menuSub{
+   position: absolute; /*This makes the sub menu to come below the main menu in relation. */
+  background: #444;
+  width: 70%;
+  display: none;  /*This hides the sub menu*/
+  color: #fff;
+  padding: 2cm;
+  left: 0px; /*This makes the sub menu arranged well*/
+}
+
+nav li:hover .menuSub{
+  display: block;
+}
+
+.menuSub li{
+  display: block; /* This allows the sub menu links to be vertical*/
+}
+
+.menuSub a{
+  padding: 0px;
+  margin-bottom: 0.35cm;
+}
+
+.menuSub a:hover{
+  text-decoration: underline;
+}
+
+.subjects{
+  margin: 2.5cm 0px .5cm;
+}
+
+.subjects:first-of-type{ /*child selector pointing the top heading known as Science subjects thereby removing the space with margin 0.*/
+  margin-top: 0px;
+}
+
+.column_1,
+.column_2,
+.column_3{
+  float: left;
+}
+
+.column_1{
+  width: 33%;
+}
+.column_2{
+  width: 33%;
+}
+.column_3{
+  width: 33%;
+}
