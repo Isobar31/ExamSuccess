@@ -1,0 +1,31 @@
+body{
+  background-color: #00ffff;
+}
+img{
+  width: 100px;
+  height: 100px;
+  /* transform: translate(200px, 200px); */
+  /* transform: scale(2,3); */
+  /* transform: rotateZ(-90deg); */
+  /* transform: skewY(10deg); */
+  transform: matrix(2, -0.3, 0, 1, 50, 30); /*matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+}
+
+.circle{
+  width: 100px;
+  padding:50px 0px;
+  line-height: 0px;
+  background: pink;
+  color:black;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 50px;
+  text-align: center;
+  transition: 0.5s, transform 0.5s 0s linear; /*The seconds are as follows: background-time, transform-speed and transform-time.*/
+
+}
+
+.circle:hover{
+  background: red;
+  transform: translate(200px, 100px);
+}
