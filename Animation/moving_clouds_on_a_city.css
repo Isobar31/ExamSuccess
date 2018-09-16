@@ -1,0 +1,79 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+.container{
+  background: url(../../imgTesting/city.jpg);
+  background-size: cover;
+  height: 650px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container img{
+  width: 100%;
+}
+
+.container .cloud1{
+  position: absolute;
+  top: 60px;
+  animation: cloudOne infinite 30s linear;
+}
+.container .cloud2{
+  position: absolute;
+  top: -50px;
+  animation: cloudTwo infinite 45s linear;
+}
+.container .cloud3{
+  position: absolute;
+  top: 0px;
+  animation: cloudThree infinite 15s linear;
+}
+.container .cloud4{
+  position: absolute;
+  top: 0px;
+  animation: cloudFour infinite 60s linear;
+}
+
+@keyframes cloudOne {
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+      transform: translateX(100%);
+  }
+}
+@keyframes cloudTwo {
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+      transform: translateX(100%);
+  }
+}
+@keyframes cloudThree {
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+      transform: translateX(100%);
+  }
+}
+@keyframes cloudFour {
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+      transform: translateX(100%);
+  }
+}
