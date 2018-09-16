@@ -21,7 +21,7 @@ img{
   cursor: pointer;
   margin: 50px;
   text-align: center;
-  transition: 0.5s, transform 0.5s 0s linear; /*The secods are as follows: background-time, transform-speed and transform-time.*/
+  transition: 0.5s, transform 0.5s 0s linear; /*The seconds are as follows: background-time, transform-speed and transform-time.*/
 
 }
 
