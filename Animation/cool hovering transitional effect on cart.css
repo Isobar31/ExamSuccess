@@ -1,0 +1,110 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #d8003a;
+}
+
+.center{
+  position: absolute; /*makes any other objects to be placed on the background.*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*Helps in positioning the button at the center of the page.*/
+}
+
+a{
+  text-decoration: none;
+  font-family: arial;
+  font-size: 20px;
+  color: #262626;
+  text-transform: uppercase;
+}
+
+a div{
+  display: inline-block; /*Makes the two different divs to be next to each other horizontally.*/
+  background: #fff;
+  position: relative; /*Relative to the center class and also helps in enabling the two icons to join together.*/
+  text-align: center;
+  line-height: 60px; /*positions the text and the cart at a good vertical position.*/
+  overflow: hidden;
+}
+
+a div span{
+  position: relative; /*positions the text and the cart button on the small created backgrounds.*/
+  transition: .2s; /*time for the resulting transition.*/
+}
+
+a div:nth-child(1){ /*sets the position of the 3rd background on top of the small background. This 3rd background is the background that will hover.*/
+  width: 150px;
+  height: 60px;
+}
+a div:nth-child(2){
+  width: 60px;
+  height: 60px;
+  left: -6px; /*This is to merge the two span buttons. The distance in between them is -6px.*/
+}
+
+ a div:nth-child(1) div,
+a div:nth-child(2) div{/*sets the cart on its small created 3rd background.*/
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+a div:nth-child(1) div{
+  background: #fff; /*The color of the 2nd background which shows up when hovered.*/
+}
+
+a div:nth-child(2) div{
+  background: #262626;
+}
+
+a div:nth-child(1) div:before,
+a div:nth-child(2) div:before
+{/*positioning the text and the cart before hover transitional effect.*/
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transition: .5s; /*time for the hover transition effect.*/
+}
+
+a div:nth-child(1) div:before
+{
+  background: #262626;
+}
+
+a div:nth-child(2) div:before
+{
+  background: #fff;
+}
+
+a:hover div:nth-child(1) div:before{
+  transform: translateX(-100%);
+  background: #fff;
+}
+
+a div:nth-child(1) span{
+  color: #fff;
+  z-index: 1;
+}
+
+a:hover div:nth-child(1) span{
+  color: #262626;
+  z-index: 1;
+}
+a div:nth-child(2) span{
+  color: #262626;
+  z-index: 1;
+}
+
+a:hover div:nth-child(2) span{
+  color: #fff;
+  z-index: 1;
+}
+
+a:hover div:nth-child(2) div:before{
+  transform: translateX(100%);
+  background: #262626;
+}
