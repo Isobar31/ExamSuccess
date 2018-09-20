@@ -1,0 +1,52 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #fcff8a;
+}
+
+h1{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  font-family: "arial black";
+  font-size: 10em;
+}
+
+h1:before,
+h1:after{
+  content: attr(data-name);
+  color: #262626;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  transition: .3s;
+  overflow: hidden;
+}
+
+h1:before{
+  -webkit-clip-path:polygon(55% 0%, 0% 0%, 0% 100%, 35% 100%);
+  clip-path:polygon(55% 0%, 0% 0%, 0% 100%, 35% 100%);
+  /* background: #f00; */
+}
+
+h1:after{
+  -webkit-clip-path:polygon(55% 0%, 100% 0%, 100% 100%, 35% 100%);
+  clip-path:polygon(55% 0%, 100% 0%, 100% 100%, 35% 100%);
+  /* background: #ff0; */
+}
+
+h1:hover:before{
+  top: -5px;
+  left: -10px;
+  transform: rotate(-5deg);
+}
+
+h1:hover:after{
+  top: 5px;
+  left: 10px;
+  transform: rotate(5deg);
+}
