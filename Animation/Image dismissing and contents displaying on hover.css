@@ -1,0 +1,93 @@
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #262626;
+  font-family: verdana;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imgBox{
+  position: relative;
+  width: 500px;
+  height: 300px;
+  background-size: cover;
+  border: 2px solid #00ffff;
+  overflow: hidden;
+}
+
+.imgBox img{
+  width: 100%;
+  transition: .5s;
+}
+
+.container{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: .5s;
+}
+
+.container:before{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: translateX(-100) scale(1) skew(-45deg);
+  transition: .5s;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 30px 50px;
+  text-align: center;
+}
+
+.content h1{
+  padding: 0px;
+  color: #00d700;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  transform: translateY(-100%) scale(0);
+}
+
+.content p{
+  padding: 0px;
+  color: #00ffff;
+  font-size: 1em;
+  transform: scale(2);
+  transition: .5s;
+  opacity: 0;
+}
+
+.imgBox:hover .content h1{
+  transform: translateY(0) scale(1);
+}
+
+.imgBox:hover .content p{
+  transform: scale(1);
+  opacity: 1;
+}
+
+.imgBox:hover img{
+  transform: scale(2) translate(-50px);
+}
+
+.imgBox:hover .container:before{
+  opacity: 1;
+  background: #5f00d7;
+  transform: translateX(0) scale(1) skew(-45deg);
+}
